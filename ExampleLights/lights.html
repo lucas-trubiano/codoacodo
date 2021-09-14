@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Access-Control-Allow-Origin" content="*">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<title>NodeMCU/ESP8266 Control</title>
+		<title>IoT Light Controller</title>
 		<style>
 			html {
 				font-family: Arial;
@@ -13,6 +13,12 @@
 				text-align: center;
                 background-color: #ffffff;
 			}
+            body{
+                /* position: absolute;
+                top:20%;
+                left: 40%; */
+				justify-content: center;
+            }
       
 			h1 { font-size: 2.0rem; color:#2980b9;}
       
@@ -85,7 +91,7 @@
 		</style>
 	</head>
 	<body>
-        
+
 		<div>
             <h1>Control Luz</h1>
 			<button type="button" id="light-on" class="buttonON" onclick=encenderON() >Encender</button>

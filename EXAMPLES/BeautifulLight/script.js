@@ -10,7 +10,7 @@ function updateValue(e) {
   console.log("Estado: "+estado);
   if (estado){ // está presionado
     document.getElementById("imagen").innerHTML = "<use id='logo' xlink:href='#lightOn' />";
-    document.getElementById("imagen").style = "height: 400px;width: 400px;";
+    document.getElementById("imagen").style = "height: 190px;width: 190px;";
 
     document.getElementById("logo").style = "fill: rgb(249, 191, 22);";
     document.getElementById("fondo").style = "background-color: white;";

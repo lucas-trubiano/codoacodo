@@ -1,25 +1,31 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 .header{
     background-color: purple;
     color: white;
     text-align: center;
-    padding: 1vw;
+    padding: 12px;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
 }
     .logo{
-        background-color: tomato;
-        flex: 3 1 auto;
+        /* background-color: tomato; */
+        height: 100%;
+        width: auto;
+        padding-right: 20px;
     }
+
     .social{
         /* background-color: violet; */
-        flex: 1 1 auto;
+        /* flex: 1 1 auto; */
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left: 5px;
     }
         .socialitem{
             color: white;
@@ -27,24 +33,34 @@
             /* font-size: 60%; */
             font-size: 150%;
             flex: 1 1 auto;
+            padding: 5px;
         }
     .nav{
         /* background-color: orange; */
-        flex: 7 1 auto;
+        flex: 1 1 auto;
         display: flex;
+        align-items: center;
     }
         .navitem{
             /* background-color: cadetblue; */
             flex: 1 1 auto;
+            text-decoration: none;
+            color: white;
+            padding: 13px 0px;
+            display: flex;
+            flex-direction: column;
         }
-        .navitem-active{
-            background-color: violet;
-            flex: 1 1 auto;
+        .actual{
+            background-color: white;
+            color: purple;
+            border-radius: 5px;
+            /* flex: 1 1 auto; */
         }
 .contenedor{
     text-align: center;
-    padding: 1vw;
+    /* padding: 1vw; */
     height: 100vh;
+    width: 100vw;
 }
 .footer{
     background-color: #1e1e1e;
@@ -89,24 +105,62 @@
     width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-    .contenedor {
-      background-color: blue;
-    }
+@media only screen and (max-width: 900px) {
+.contenedor {
+    background-color: blue;
+}
+.header{
+    height: 110px;
+    /* padding: 12px 12px 0px 12px; */
+    padding: 0px;
+    padding-top: 12px;
+    gap: 0px;
+}   
     
     .logo{
-        background-color: tomato;
-        flex: 6 1 auto;
-        /* width: 30%; */
+        /* background-color: tomato; */
+        flex: 1 1 auto;
+        height: 60px;
+        display: flex;
+        padding: 0px 12px;
     }
     .social{
         /* background-color: violet; */
-        flex: 6 1 auto;
+        /* flex: 1 1 auto; */
         /* width: 30%; */
+        height: 50%;
+        display: flex;
+        justify-content: right;
+        padding: 0px 12px;
     }
     .nav{
         /* background-color: orange; */
         width: 100%;
         order: 2;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        padding: 0px;
     }
+        .navitem{
+            /* background-color: cadetblue; */
+            flex: 1 1 auto;
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            border-radius: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .actual{
+            background-color: white;
+            color: purple;
+            border-radius: 5px;
+            margin: 0px 10px;
+            /* flex: 1 1 auto; */
+        }
+        a p{
+            padding-left: 8px;
+        }
 }

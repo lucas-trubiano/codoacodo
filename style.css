@@ -210,7 +210,8 @@
                 /* max-width: 130px; */
                 text-decoration: none;
                 color: white;
-                /* padding: 8px; */
+                padding: 8px;
+                font-size: 90%;
                 border-radius: 0px;
                 display: flex;
                 flex-direction: column;
@@ -219,7 +220,7 @@
             .actual{
                 background-color: white;
                 color: purple;
-                /* border-radius: 5px; */
+                border-radius: 5px;
                 margin: 0px 10px;
                 /* flex: 1 1 auto; */
             }

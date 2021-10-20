@@ -39,11 +39,13 @@
         /* background-color: orange; */
         flex: 1 1 auto;
         display: flex;
+        justify-content: center;
         align-items: center;
     }
         .navitem{
             /* background-color: cadetblue; */
             flex: 1 1 auto;
+            max-width: 100px;
             text-decoration: none;
             color: white;
             padding: 13px 0px;
@@ -145,6 +147,7 @@
         .navitem{
             /* background-color: cadetblue; */
             flex: 1 1 auto;
+            max-width: 130px;
             text-decoration: none;
             color: white;
             padding: 8px;
@@ -164,3 +167,63 @@
             padding-left: 8px;
         }
 }
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        background-color: red;
+    }
+    .header{
+        height: 120px;
+        /* padding: 12px 12px 0px 12px; */
+        padding: 0px;
+        padding-top: 12px;
+        gap: 0px;
+    }   
+        
+        .logo{
+            /* background-color: tomato; */
+            flex: 1 1 auto;
+            height: 60px;
+            display: flex;
+            padding: 0px 12px;
+        }
+        .social{
+            /* background-color: violet; */
+            /* flex: 1 1 auto; */
+            /* width: 30%; */
+            height: 50%;
+            display: flex;
+            justify-content: right;
+            padding: 0px 12px;
+        }
+        .nav{
+            /* background-color: orange; */
+            width: 100%;
+            order: 2;
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            padding: 0px;
+        }
+            .navitem{
+                /* background-color: cadetblue; */
+                flex: 1 1 auto;
+                max-width: 130px;
+                text-decoration: none;
+                color: white;
+                padding: 8px;
+                border-radius: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .actual{
+                background-color: white;
+                color: purple;
+                border-radius: 5px;
+                margin: 0px 10px;
+                /* flex: 1 1 auto; */
+            }
+            a p{
+                padding-left: 8px;
+            }
+    }

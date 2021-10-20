@@ -207,10 +207,10 @@
             .navitem{
                 /* background-color: cadetblue; */
                 flex: 1 1 auto;
-                max-width: 130px;
+                /* max-width: 130px; */
                 text-decoration: none;
                 color: white;
-                padding: 8px;
+                /* padding: 8px; */
                 border-radius: 0px;
                 display: flex;
                 flex-direction: column;
@@ -219,11 +219,11 @@
             .actual{
                 background-color: white;
                 color: purple;
-                border-radius: 5px;
+                /* border-radius: 5px; */
                 margin: 0px 10px;
                 /* flex: 1 1 auto; */
             }
             a p{
-                padding-left: 8px;
+                padding: 0px;
             }
     }

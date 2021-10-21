@@ -90,6 +90,7 @@
         background-image: url("imgs/verano.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
     .textosmain{
         background-color: rgba(0, 0, 0, 0.6);
@@ -239,4 +240,8 @@
             margin: 0px 10px;
             /* flex: 1 1 auto; */
         }
+    .main{
+        
+        height: 400px;
+    }
 }

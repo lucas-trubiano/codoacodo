@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* .col-1{width: 8.33%;}
+.col-1{width: 8.33%;}
 .col-2{width: 16.66%;}
 .col-3{width: 25%;}
 .col-4{width: 33.33%;}
@@ -15,9 +15,8 @@
 .col-9{width: 75%;}
 .col-10{width: 83.33%;}
 .col-11{width: 91.66%;}
-.col-12{width: 100%;} */
+.col-12{width: 100%;}
 
-/* Header styles */
 .header{
     background-color: purple;
     color: white;
@@ -74,7 +73,6 @@
             /* flex: 1 1 auto; */
         }
 
-/* Contenedor principal styles */
 .contenedor{
     /* padding: 1vw; */
     background-color: tomato;
@@ -117,93 +115,41 @@
         padding-bottom: 1rem;
     }
 
-/* Footer styles */
 .footer{
     background-color: #3f3f3f;
     color: white;
     text-align: center;
+    padding: 1vw;
     display: flex;
     justify-content: center;
-    width: 100vw;
+    align-items: center;
 }
-.footercont{
-    /* padding: 1vw; */
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template:
-    "gc   sep1    muni  sep2    contacto sep3    mapa" 200px /
-     1fr  auto    1fr   auto    1fr      auto    1fr;
-    padding: 12px 20px;
-    gap: 20px;
-    justify-content: center;
-} 
     .footersep{
-        width: 2px;
+        height: 80px;
         border: none;
-        background-color: #646464;
-        height: 80%;
+        width: 2px;
+        margin-left: 20px;
+        background-color: white;
     }
-    .sep1{
-        grid-area: sep1;
-        place-self: center;
+    .footercont{
+        background-color: violet;
+        flex: 1 1 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1000px;
+        /* grid-template-columns: 1fr 1fr; */
     }
-    .sep2{
-        grid-area: sep2;
-        place-self: center;
-    }
-    .sep3{
-        grid-area: sep3;
-        place-self: center;
-    }
-    .logogc{
-        grid-area: gc;
-        place-self: center;
-        height: 100%;
-        /* width: 100%; */
-        width: 184px;
-
-        background-image: url("logos/logo_gc.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        /* background-color: aqua; */
-
+    .it1{
+        background-color: red;
         display: flex;
+        height: 80px;
         justify-content: center;
         align-items: center;
     }
-    .infomuni{
-        grid-area: muni;
-        place-self: center;
-        font-size: 90%;
-
+    .it2{
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
-        text-align: left;
-    }
-    .contacto{
-        grid-area: contacto;
-        place-self: center;
-        font-size: 88%;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
-        text-align: center;
-        padding-bottom: 18px;
-    }
-    .mapa{
-        grid-area: mapa;
-        place-self: center;
-        font-size: 90%;
-
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+        justify-content: center;
+        align-items: flex-start;
     }
 
 @media only screen and (max-width: 900px) {
@@ -268,12 +214,6 @@
         height: 250px;
         /* background-position: center top; */
     }
-.footercont{
-    grid-template:
-    "gc        sep1    muni" 100px
-    "contacto  sep1    mapa" 150px /
-     1fr       auto    1fr;
-}
 }
 
 @media only screen and (max-width: 600px) {
@@ -346,20 +286,5 @@
         text-align: center;
         /* background-position: center top; */
     }
-    .footercont{
-        grid-template:
-        "gc" 100px
-        "sep1" 2px
-        "muni" 100px
-        "sep2" 2px
-        "contacto" 100px
-        "sep3" 2px
-        "mapa" 200px /
-         1fr;
-    }
-    .footersep{
-        width: 70%;
-        /* border: none; */
-        /* background-color: #646464; */
-    }
+    
 }

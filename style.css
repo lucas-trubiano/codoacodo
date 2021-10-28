@@ -251,6 +251,7 @@
                 /* On mouse-over */
                 button:hover {background: rgb(22, 101, 180);}
 
+/* Estilos de eventos */
     .cards-eventos{
         /* background-color: green; */
         width: 80%;
@@ -275,6 +276,37 @@
                 height: 100%;
                 border-radius: 10px 10px 0px 0px;
             }
+
+/* Estilos de frase motivacional */
+.frasemotivacional{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px;
+    background-color: #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .card-frase{
+        /* background-color: #5f5f5f; */
+        width: 50%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+        .logo-frase{
+            font-size: 2em;
+            text-align: center;
+        }
+        .texto-frase{
+            font-size: 1.5em;
+        }
+        .autor-frase{
+            text-align: right;
+            font-size: 1.2em;
+        }
+
 
 /* Footer styles */
 .footer{
@@ -444,6 +476,10 @@
                 border-radius: 10px 0px 0px 10px;
             }
     
+    /* La frase la estiro un poco mas */
+    .card-frase{
+        width: 80%;
+    }
 .footercont{
     grid-template:
     "gc        sep1    contacto" 100px
@@ -536,6 +572,20 @@
                 border-radius: 10px 10px 0px 0px;
             }
 
+    /* como se ve la frase en mobile */
+    .card-frase{
+        width: 80%;
+    }
+        .logo-frase{
+            font-size: 1.5em;
+        }
+        .texto-frase{
+            font-size: 1.2em;
+        }
+        .autor-frase{
+            font-size: 1em;
+        }
+    
     .textosmain{
         width: 100%;
         /* padding: 0px 20px; */

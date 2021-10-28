@@ -1,3 +1,6 @@
+:root{
+    --violeta-gc: #800080;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -19,7 +22,7 @@
 
 /* Header styles */
 .header{
-    background-color: rgb(110, 27, 98);
+    background-color: var(--violeta-gc);
     color: white;
     text-align: center;
     padding: 12px;
@@ -100,7 +103,7 @@
     width: 100%;
     background-color: #e0e0e0;
     text-align: center;
-    color: rgb(110, 27, 98);
+    color: var(--violeta-gc);
 
     display: flex;
     flex-direction: row;
@@ -112,6 +115,47 @@
     
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+/* Boton para ver mas cursos o mas eventos */
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--violeta-gc);
+    border-radius: 0.6em;
+    color: var(--violeta-gc);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    /* margin: 20px; */
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  .btn:hover, .btn:focus {
+    color: #fff;
+    outline: 0;
+  }
+  .first {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .first:hover {
+    box-shadow: 0 0 40px 40px var(--violeta-gc) inset;
+  }
 /* Imagen de bienvenida y textos */
     .main{
         width: 100%;
@@ -147,11 +191,6 @@
     }
 
 /* Estilos de cursos */
-.mascursos{
-    background-color: yellow;
-    padding: 12px;
-    border-radius: 10px;
-}
     .cards-cursos{
         /* background-color: green; */
         width: 80%;
@@ -171,7 +210,7 @@
             grid-template-columns: 2fr 4fr;
             /* height: 200px; */
         }
-            .card-img{
+            .card-curso>.card-img{
                 /* grid-area: img; */
                 height: 100%;
                 border-radius: 10px 0px 0px 10px;
@@ -211,6 +250,31 @@
                 }
                 /* On mouse-over */
                 button:hover {background: rgb(22, 101, 180);}
+
+    .cards-eventos{
+        /* background-color: green; */
+        width: 80%;
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 20px;
+        grid-gap: 40px;
+    }
+        .card-evento{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+            /* padding: 20px; */
+
+            /* width: 100%; */
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            /* height: 200px; */
+        }
+            .card-evento>.card-img{
+                /* grid-area: img; */
+                height: 100%;
+                border-radius: 10px 10px 0px 0px;
+            }
 
 /* Footer styles */
 .footer{
@@ -368,6 +432,16 @@
     .card-curso{
         grid-template-columns: 1fr 1fr;
     }
+
+    .cards-eventos{
+        /* background-color: green; */
+        width: 80%;
+        max-width: 400px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        grid-gap: 40px;
+    }
     
 .footercont{
     grid-template:
@@ -446,7 +520,7 @@
         /* cambio el formato columnas por filas */
     }
     /* tengo que cambiar los bordes en la imagen ahora */
-    .card-img{
+    .card-curso>.card-img{
         border-radius: 10px 10px 0px 0px;
     }
 

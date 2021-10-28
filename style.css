@@ -442,6 +442,9 @@
         padding: 20px;
         grid-gap: 40px;
     }
+        .card-evento{
+            grid-template-rows: 2fr 3fr;
+        }
     
 .footercont{
     grid-template:

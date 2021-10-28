@@ -434,17 +434,15 @@
     }
 
     .cards-eventos{
-        /* background-color: green; */
-        width: 80%;
-        max-width: 400px;
-        display: grid;
         grid-template-columns: 1fr;
-        padding: 20px;
-        grid-gap: 40px;
     }
         .card-evento{
-            grid-template-rows: 2fr 3fr;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
         }
+            .card-evento>.card-img{
+                border-radius: 10px 0px 0px 10px;
+            }
     
 .footercont{
     grid-template:
@@ -526,6 +524,17 @@
     .card-curso>.card-img{
         border-radius: 10px 10px 0px 0px;
     }
+    .cards-eventos{
+        /* width: 70%; */
+        grid-template-columns: 1fr;
+    }
+        .card-evento{
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+        }
+            .card-evento>.card-img{
+                border-radius: 10px 10px 0px 0px;
+            }
 
     .textosmain{
         width: 100%;

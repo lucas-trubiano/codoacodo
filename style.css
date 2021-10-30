@@ -307,41 +307,52 @@
             font-size: 1.2em;
         }
 
-/* Estilos bloque sobre nosotros */
-/* Lo inclui mas arriba */
-/* .nosotros{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 30px;
-    background-color: #3f3f3f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-} */
-
 .card-nosotros{
-    background-color: #5f5f5f;
+    box-sizing: border-box;
     width: 70%;
-    height: 200px;
+    height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "bodynos imagennos";
+    /* grid-template-columns: 1fr auto; */
+    gap: 10px;
 }
     .body-nosotros{
+        grid-area: bodynos;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 20px;
+        font-size: 1.2em;
     }
-        .titulo-nosotros{
-        }
-        .contenido-nosotros{
-        }
         .boton-nosotros{
+            display: flex;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+        }
+        .second {
+            -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            border: 2px solid white;
+            color: white;
+        }
+        .second:hover {
+            color: #3f3f3f;
+            box-shadow: 0 0 40px 40px white inset;
         }
     .imagen-nosotros{
+        grid-area: imagennos;
+        box-sizing: border-box;
+        border-radius: 50%;
         height: 100%;
         width: 100%;
-        background-color: blueviolet;
+        /* background-color: blueviolet; */
+        padding: 20px;
     }
         .imagen-nosotros img{
-            height: 100%;
+            border-radius: 50%;
+            height: 250px;
             width: auto;
             margin: auto;
             display: block;
@@ -519,6 +530,17 @@
     .card-frase{
         width: 80%;
     }
+
+    /* Tengo que cambiar de lugar la imagen de un poco de nosotros */
+    .card-nosotros{
+        grid-template-areas:
+            "imagennos"
+            "bodynos";
+    }
+        .body-nosotros{
+            gap: 20px;
+        }
+    
 .footercont{
     grid-template:
     "gc        sep1    contacto" 100px
@@ -624,7 +646,22 @@
         .autor-frase{
             font-size: 1em;
         }
+    /* ver nosotros en mobile */
+    .card-nosotros{
+        width: 90%;
+        grid-template-areas:
+        "imagennos"
+        "bodynos";
+        gap: 10px;
+    }
     
+        .imagen-nosotros img{
+            width: 90%;
+            max-width: 250px;
+            height: auto;
+        }
+
+
     .textosmain{
         width: 100%;
         /* padding: 0px 20px; */

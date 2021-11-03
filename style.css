@@ -71,12 +71,18 @@
             display: flex;
             flex-direction: column;
         }
+        .navitem:hover{
+            padding-bottom: 10px;
+        }
         .actual{
             background-color: white;
             color: purple;
             border-radius: 5px;
             /* flex: 1 1 auto; */
         }
+        /* .actual:hover{
+            padding-bottom: 13px;
+        } */
 
 /* Contenedor principal styles */
 .contenedor{  
@@ -255,7 +261,9 @@
                     background-color: dodgerblue;
                 }
                 /* On mouse-over */
-                button:hover {background: rgb(22, 101, 180);}
+                button:hover {
+                    background: rgb(4, 107, 209);
+                }
 
 /* Estilos de eventos */
     .cards-eventos{
@@ -317,6 +325,7 @@
             font-size: 1.2em;
         }
 
+/* Estilos sobre nosotros */
 .card-nosotros{
     box-sizing: border-box;
     width: 70%;
@@ -367,6 +376,94 @@
             margin: auto;
             display: block;
         }
+
+/* Estilos formulario de contacto */
+.contactoform{
+    width: 100%;
+    /* background-color: blue; */
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+}
+    .formulario{
+        background-color: var(--violeta-gc);
+        color: white;
+        width: 90%;
+        max-width: 500px;
+        
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        border-radius: 15px;
+
+        display: grid;
+        grid-template-areas:
+        "titulo  titulo  titulo"
+        "nombre  email   ."
+        "mensaje mensaje botones";
+        /* box-sizing: border-box; */
+        padding: 28px;
+        gap: 12px;
+    }
+    .titulo-form{
+        grid-area: titulo;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .nombre-form{
+        grid-area: nombre;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+    }
+    .email-form{
+        grid-area: email;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    }
+    .mensaje-form{
+        grid-area: mensaje;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    }
+    .botones-form{
+        grid-area: botones;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .boton-form{
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #7c7c7c;
+        color: white;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    .boton-form:hover{
+        background-color: #666666;
+    }
+    .enviar{
+        background-color: dodgerblue;
+        color: white;
+    }
+    .enviar:hover{
+        background: rgb(4, 107, 209);
+    }
+    .entry{
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
 
 /* Footer styles */
 .footer{
@@ -550,7 +647,26 @@
         .body-nosotros{
             gap: 20px;
         }
-    
+    /* formulario de contacto en tablet */
+    .formulario{
+        grid-template-areas:
+        "titulo titulo"
+        "nombre email"
+        ". ."
+        "mensaje mensaje"
+        ". ."
+        "botones botones";
+        width: 70%;
+    }
+    .botones-form{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .boton-form{
+        width: 50%;
+    }
+
 .footercont{
     grid-template:
     "gc        sep1    contacto" 100px
@@ -664,13 +780,31 @@
         "bodynos";
         gap: 10px;
     }
-
         .imagen-nosotros img{
             width: 90%;
             max-width: 250px;
             height: auto;
         }
-
+    /* formulario de contacto en mobile */
+    .formulario{
+        grid-template-areas:
+        "titulo"
+        "nombre"
+        "email"
+        "."
+        "mensaje"
+        "."
+        "botones";
+        width: 70%;
+    }
+    .botones-form{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .boton-form{
+        width: 100%;
+    }
 
     .textosmain{
         width: 100%;

@@ -101,7 +101,7 @@
 .title{
     /* flex: 1 1 auto; */
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #eeeeee;
     text-align: center;
     color: var(--violeta-gc);
 
@@ -114,6 +114,9 @@
     font-size: 150%;
     
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.txt-center{
+    text-align: center;
 }
 
 /* Boton para ver mas cursos o mas eventos */
@@ -213,7 +216,10 @@
             .card-curso>.card-img{
                 /* grid-area: img; */
                 height: 100%;
+                width: auto;
                 border-radius: 10px 0px 0px 10px;
+                background-position: center center;
+                background-size: cover;
             }
             .card-body{
                 /* grid-area: body; */
@@ -274,7 +280,10 @@
             .card-evento>.card-img{
                 /* grid-area: img; */
                 height: 100%;
+                width: auto;
                 border-radius: 10px 10px 0px 0px;
+                background-position: center center;
+                background-size: cover;
             }
 
 /* Estilos de frase motivacional */
@@ -303,6 +312,7 @@
             font-size: 1.5em;
         }
         .autor-frase{
+            color: #cacaca;
             text-align: right;
             font-size: 1.2em;
         }

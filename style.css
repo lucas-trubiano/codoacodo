@@ -554,6 +554,13 @@
         gap: 10px;
     }
 
+/* invertir el color cuando entro en cada pagina */
+.invert{
+    background-color: var(--violeta-gc);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
 @media only screen and (max-width: 900px) {
 .contenedor {
     /* background-color: blue; */

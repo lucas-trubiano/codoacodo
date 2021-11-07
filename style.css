@@ -55,7 +55,10 @@
             padding: 5px;
         }
         .socialitem:hover{
-            padding-bottom: 1px;
+            position: relative;
+            bottom: 3px;
+            color: #e0e0e0;
+            /* padding-bottom: 1px; */
             /* color: rgb(184, 184, 184); */
         }
     .nav{
@@ -76,7 +79,10 @@
             flex-direction: column;
         }
         .navitem:hover{
-            padding-bottom: 10px;
+            /* padding-bottom: 10px; */
+            position: relative;
+            bottom: 4px;
+            color: #e0e0e0;
         }
         .actual{
             background-color: white;
@@ -84,9 +90,10 @@
             border-radius: 5px;
             /* flex: 1 1 auto; */
         }
-        /* .actual:hover{
-            padding-bottom: 13px;
-        } */
+        .actual:hover{
+            background-color: #e0e0e0;
+            color: purple;
+        }
 
 /* Contenedor principal styles */
 .contenedor{  
@@ -548,6 +555,11 @@
         text-align: center;
         padding-bottom: 18px;
     }
+        .iconoshoriz .socialitem:hover{
+            color: #e0e0e0;
+            position: relative;
+            bottom: 3px;
+        }
     .mapa{
         grid-area: mapa;
         place-self: center;

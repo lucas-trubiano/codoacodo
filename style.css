@@ -54,6 +54,10 @@
             flex: 1 1 auto;
             padding: 5px;
         }
+        .socialitem:hover{
+            padding-bottom: 1px;
+            /* color: rgb(184, 184, 184); */
+        }
     .nav{
         /* background-color: orange; */
         flex: 1 1 auto;

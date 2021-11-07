@@ -43,6 +43,15 @@ function header(page){
     </div>`;
     var pages = document.querySelectorAll(".navitem");
     pages[page].className = "navitem actual";
+    
+    // var aside = document.createElement("aside")
+    var whatsapp = `<aside class="whatsapp">
+    <a href="https://api.whatsapp.com/send?phone=5492612051915" target="_blank">
+        <img src="imgs/WhatsApp-logo.png" height="50px" width="auto" alt="">
+    </a>
+</aside>`
+    // aside.innerHTML = whatsapp
+    document.write(whatsapp)
 }
 
 function footer(){

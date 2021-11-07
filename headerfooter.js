@@ -6,7 +6,7 @@ function header(page){
         <img src="logos/logo_cdf.svg" height="100%" alt="logo cdf">
     </div>
     <nav class="nav">
-        <a class="navitem" href="/index.html">
+        <a class="navitem home" href="/index.html">
             <i class="fas fa-home"></i>
             <p>Bienvenida</p>
         </a>
@@ -42,15 +42,19 @@ function header(page){
         </a>
     </div>`;
     var pages = document.querySelectorAll(".navitem");
-    pages[page].className = "navitem actual";
+    if(page==0){
+        pages[page].className = "navitem home actual";
+    }else{
+        pages[page].className = "navitem actual";
+    }
     
-    // var aside = document.createElement("aside")
-    var whatsapp = `<aside class="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=5492612051915" target="_blank">
-        <img src="imgs/WhatsApp-logo.png" height="50px" width="auto" alt="">
-    </a>
-</aside>`
-    // aside.innerHTML = whatsapp
+    // Escribo a continuacion del header un elemento aside para el whatsapp, en forma de fixed
+    var whatsapp = `
+    <aside class="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5492612051915" target="_blank">
+            <img src="imgs/WhatsApp-logo.png" height="50px" width="auto" alt="">
+        </a>
+    </aside>`
     document.write(whatsapp)
 }
 

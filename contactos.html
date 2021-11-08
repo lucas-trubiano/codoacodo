@@ -20,7 +20,6 @@
     
     <!-- My script for header and footer -->
     <script src="headerfooter.js"></script>
-    <script src="validacionForm.js"></script>
   
 </head>
 <body>
@@ -57,7 +56,7 @@
         <br><br>
 
         <section class="contactoform">
-            <form class="formulario">
+            <form class="formulario" id="my-form">
                 <h2 class="titulo-form">
                     Contactanos
                 </h2>
@@ -65,17 +64,15 @@
                 </div> -->
                 <div class="nombre-form">
                     <label for="nombre" id="nombre">Nombre y Apellido</label>
-                    <input class="entry" type="fullname" name="fullname" id="nombre">
+                    <input class="entry" name="fullname" id="entry-nombre" placeholder="Juan Perez">
                 </div>
                 <div class="email-form">
                     <label for="email" id="email">Email</label>
-                    <input class="entry" type="email" name="email" id="email">
+                    <input class="entry" type="email" name="email" id="entry-email" placeholder="correo@correo.com">
                 </div>
-                <!-- <div class="cuerpo-form">
-                </div> -->
                 <div class="mensaje-form">
                     <label for="mensaje">Mensaje o Consulta</label>
-                    <textarea class="entry" name="mensaje" maxlength="200" minlength="20" id="mensaje" cols="30" rows="10"></textarea>
+                    <textarea class="entry" name="mensaje" maxlength="200" minlength="20" id="entry-mensaje" cols="30" rows="10" placeholder="Escriba su mensaje aquí."></textarea>
                 </div>
                 <div class="botones-form">
                     <button class="boton-form" type="reset">Limpiar</button>
@@ -83,6 +80,7 @@
                 </div>
             </form>
         </section>
+        <script src="validacionForm.js"></script>
 
     </main>
 

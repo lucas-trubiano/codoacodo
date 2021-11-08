@@ -3,7 +3,9 @@ function header(page){
     var header = document.querySelector("#insertheader");
     header.innerHTML = `
     <div class="logo">
-        <img src="logos/logo_cdf.svg" height="100%" alt="logo cdf">
+        <a href="/index.html">
+            <img src="logos/logo_cdf.svg" height="100%" alt="logo cdf">
+        </a>
     </div>
     <nav class="nav">
         <a class="navitem home" href="/index.html">

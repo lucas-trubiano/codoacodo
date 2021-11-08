@@ -1,10 +1,14 @@
 :root{
     --violeta-gc: #800080;
 }
+
 *{
     margin: 0px;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
+    /* -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; */
 }
 
 /* .col-1{width: 8.33%;}
@@ -37,7 +41,9 @@
         width: auto;
         padding-right: 20px;
     }
-
+    .logo:hover{
+        animation: flip 1s;
+    }
     .social{
         /* background-color: violet; */
         /* flex: 1 1 auto; */
@@ -137,10 +143,14 @@
 }
 
 /* Whatsapp fijo en la parte inferior */
-aside{
+.whatsapp{
     position: fixed;
     bottom: 20px;
     right: 0px;
+}
+.whatsapp:hover{
+    /* bottom: 25px; */
+    animation: rubberBand 1s;
 }
 
 /* Boton para ver mas cursos o mas eventos */
@@ -227,7 +237,6 @@ aside{
             width: 80%;
             max-width: 600px;
         }
-
 
 /* Estilos de cursos */
     .cards-cursos{
@@ -406,6 +415,10 @@ aside{
             margin: auto;
             display: block;
         }
+        .imagen-nosotros img:hover{
+            
+            animation: flip 1s;
+        }
 
 /* Estilos formulario de contacto */
 .contactoform{
@@ -552,6 +565,9 @@ aside{
         justify-content: center;
         align-items: center;
     }
+    .logogc:hover{
+        animation: flip 1s;
+    }
     .infomuni{
         grid-area: muni;
         place-self: center;
@@ -595,6 +611,58 @@ aside{
     background-color: var(--violeta-gc);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+/* Animacion de los logos gc, cdf y whatsapp */
+@keyframes rubberBand{
+    0%{
+        transform: scale3d(1,1,1);
+    }
+    35%{
+        transform: scale3d(1.25,.75,1);
+    }
+    45%{
+        transform: scale3d(.75,1,1);
+    }
+    60%{
+        transform: scale3d(1.2,.8,1);
+    }
+    75%{
+        transform: scale3d(1.05,.95,1);
+    }
+    100%{
+        transform: scale3d(1,1,1); 
+    }
+}
+
+@keyframes flip {
+    from {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+      animation-timing-function: ease-out;
+    }
+  
+    40% {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -190deg);
+      animation-timing-function: ease-out;
+    }
+  
+    50% {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
+        rotate3d(0, 1, 0, -170deg);
+      animation-timing-function: ease-in;
+    }
+  
+    80% {
+      transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
+        rotate3d(0, 1, 0, 0deg);
+      animation-timing-function: ease-in;
+    }
+  
+    to {
+      transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+      animation-timing-function: ease-in;
+    }
 }
 
 @media only screen and (max-width: 900px) {

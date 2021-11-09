@@ -28,7 +28,10 @@ formulario.addEventListener("submit",(e)=>{
     }
 
     // 3) obtener el texto o cuerpo del correo y validarlo
-    if(!expresiones.mensaje.test(mensaje.value)){
+    // console.log(mensaje.value)
+    // console.log(mensaje.value.length)
+    
+    if(!(mensaje.value.length >= 20 & mensaje.value.length <= 200)){
         alert(`No se pudo enviar el correo, mensaje incorrecto`);
         return false;
     }
